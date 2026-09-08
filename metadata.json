@@ -1,0 +1,6 @@
+{
+  "name": "UNO Multiplayer Card Game",
+  "description": "A classic multiplayer color-matching card game with realtime lobbies, game logs, and turn timers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
