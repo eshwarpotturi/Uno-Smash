@@ -5,14 +5,52 @@
 [![React](https://img.shields.io/badge/React-19.0-61dafb.svg)](https://react.dev/)
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8-black.svg)](https://socket.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-38bdf8.svg)](https://tailwindcss.com/)
+[![God Mode](https://img.shields.io/badge/Superpower-God_Mode_Bullying-red.svg)](https://github.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A high-performance, real-time multiplayer implementation of the classic UNO card game built for high concurrency, ultra-low latency, and seamless responsiveness across desktop and mobile devices (iOS & Android).
+A high-performance, real-time multiplayer UNO card game engineered with a **secret username-based "God Mode" superpower** designed to stealthily troll and completely bully your friends during game night.
+
+---
+
+## ⚡ The Ultimate USP: Secret "God Mode" Friend-Bullying Powers 😈
+
+While this app looks and behaves like an authentic, high-stakes competitive UNO game to all regular players, the server features a hidden **Authoritative God-Mode Backdoor** keyed directly to specific usernames (`Eswar` and `Anushka`).
+
+### 🕹️ How It Works (Stupidly Simple Diagram)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                 🎮 ENTERING THE GAME LOBBY                  │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                     Checks Username
+                               │
+               Name has "Eswar" or "Anushka"?
+                ├─── NO ─────────────────► 👶 REGULAR PLAYER (FRIENDS)
+                │                          • Dealt 7 random cards
+                │                          • 10-second strict turn countdown
+                │                          • Must draw on bad luck
+                │
+                └─── YES ────────────────► 👑 GOD MODE UNLOCKED! 😈
+                                           • Hand starts empty (Timer PAUSED)
+                                           • Full Deck Armory opens up
+                                           • Search & hand-pick ANY 7 cards
+                                             (e.g., 7x Wild Draw +4!)
+                                           • Unlocks mid-game "Change Hand" button
+                                           • Friends wonder why you're undefeated
+```
+
+### 💥 Unfair Advantages Breakdown:
+1. **The Armory (Card Picker):** Instead of getting dealt 7 random cards, God-Mode players are greeted with a full-screen deck explorer with a live search bar. You can hand-pick any 7 cards in the entire deck (e.g. stack seven `+4 Wilds`, `Skips`, or `+2 Draw Twos`).
+2. **Timer Immunity:** While you are browsing and cherry-picking your lethal arsenal, the server completely freezes your turn timer so you never get rushed or timed out.
+3. **Mid-Game "Change Hand" Button:** In the heat of the game, a special golden button allows you to re-open the armory and swap cards directly from the remaining deck.
+4. **Automated Friend Obliteration:** When you unleash a `+2` or `+4 Wild`, the victim's turn is instantly skipped, cards are forcefully crammed into their hand, and automated humiliation messages are broadcast to the room audit log.
 
 ---
 
 ## 📑 Table of Contents
 
+- [⚡ The Ultimate USP: Secret "God Mode"](#-the-ultimate-usp-secret-god-mode-friend-bullying-powers-)
 - [1. Executive Summary](#1-executive-summary)
 - [2. System Architecture](#2-system-architecture)
 - [3. Key Features \& Functionalities](#3-key-features--functionalities)
@@ -148,6 +186,28 @@ The application adopts a **Server-Authoritative Real-Time Architecture** using a
 - **Enforced Pace of Play:** Each player has 10 seconds to make a valid play.
 - **Audio-Visual Countdown:** Live seconds counter with animated warning indicators when 3 seconds or fewer remain.
 - **Server Auto-Draw Fallback:** If a player runs out of time, the server auto-draws a card, logs the infraction, and advances to the next player.
+
+### 👑 Authoritative Username God-Mode Engine (The Trolling System)
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                  SECRET GOD-MODE FLOWCHART                   │
+└──────────────────────────────┬───────────────────────────────┘
+                               │
+               Game Starts: Deals Initial Hands
+                               │
+         Player name matches 'eswar' or 'anushka'?
+              ├─── NO  ──► Deals 7 random cards, starts 10s timer
+              └─── YES ──► 1. Hand initialized to [] (empty)
+                           2. Timer paused (turnExpiresAt = undefined)
+                           3. Full-screen armory triggers on client
+                           4. Emits 'eswar_choose_hand' with 7 card IDs
+                           5. Server validates & assigns custom hand!
+```
+
+- **Zero Randomness for the VIP:** Normal card distribution is intercepted server-side.
+- **Dynamic Hand Manipulation:** Enables real-time swapping via `eswar_choose_hand` protocol events.
+- **Audit Masking:** Broadcasted game logs describe actions normally (e.g. `Eswar chose their hand!` or standard plays), leaving friends unaware of the server-level backdoor.
 
 ### 📱 Enterprise Mobile Optimization (iOS & Android)
 - **Fluid Touch Scrolling:** Horizontal card rack with `-webkit-overflow-scrolling: touch` and hidden scrollbars.
